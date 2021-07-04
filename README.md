@@ -53,9 +53,12 @@
           FROM nginx:latest
           CMD ["nginx", "-g", "daemon off;"]
 
-**Docker Build and run**
+**Docker Build**
 
           docker build -t webnginx .
+
+**Docker Container run**
+
           docker run -it --rm -d -p 8080:80 --name web webnginx
 
 **Open your favorite browser and navigate to http://localhost:8080   You should see the following NGINX welcome page**
