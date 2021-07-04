@@ -2,72 +2,72 @@
 
 **Step1: IF install old Docker engine first Uninstall old versions**
 
-          sudo yum remove docker \
+    sudo yum remove docker \
 
-                   docker-client \
+              docker-client \
                    
-                   docker-client-latest \
+              docker-client-latest \
                    
-                   docker-common \
+              docker-common \
                    
-                   docker-latest \
+              docker-latest \
                    
-                   docker-latest-logrotate \
+              docker-latest-logrotate \
                    
-                   docker-logrotate \
+              docker-logrotate \
                    
-                   docker-engine
+              docker-engine
 
 **Step2: Installation methods**
 
    **1. Install using the repository**
 
-          sudo yum install -y yum-utils
+    sudo yum install -y yum-utils
 
-          sudo yum-config-manager \
-              --add-repo \
-              https://download.docker.com/linux/centos/docker-ce.repo
+    sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
 
 **Install Docker Engine**
 **Install the latest version of Docker Engine and containerd**
 
-          sudo yum install docker-ce docker-ce-cli containerd.io
+    sudo yum install docker-ce docker-ce-cli containerd.io
 
 **Check Docker Service**
 
-          service docker status
+    service docker status
 
 **Start Docker Service**
 
-          sudo systemctl start docker
+    sudo systemctl start docker
 
 **Check Docker Container running**
 
-          docker ps  
+    docker ps  
 **Check Docker Container all** 
           
-          docker ps -a
+    docker ps -a
 
 **Use the Official NGINX Docker Image**
 
-          FROM nginx:latest
-          CMD ["nginx", "-g", "daemon off;"]
+    FROM nginx:latest
+    CMD ["nginx", "-g", "daemon off;"]
 
 **Docker Container Build**
 
-          docker build -t webnginx .
+    docker build -t webnginx .
 
 **Docker Container run**
 
-          docker run -it --rm -d -p 8080:80 --name web webnginx
+    docker run -it -p 8080:80 --name web webnginx
 
 **Open your favorite browser and navigate to http://localhost:8080   You should see the following NGINX welcome page**
 
-          http://localhost:8080
+    http://localhost:8080
 
 **Adding Custom HTML**
 
-          docker stop web
+    docker stop web
           
 **By default, Nginx looks in the /usr/share/nginx/html directory inside of the container for files to serve. We need to get our html files into this directory. A fairly simple way to do this is use a mounted volume. With mounted volumes, we are able to link a directory on our local machine and map that directory into our running container.
 Let’s create a custom html page and then serve that using the nginx image. index.html**
@@ -85,14 +85,14 @@ Let’s create a custom html page and then serve that using the nginx image. ind
 
 **Now Edit Dockerfile or Create New Dockerfile**
 
-          FROM nginx:latest
-          COPY ./index.html /usr/share/nginx/html/index.html
-          CMD ["nginx", "-g", "daemon off;"]
+    FROM nginx:latest
+    COPY ./index.html /usr/share/nginx/html/index.html
+    CMD ["nginx", "-g", "daemon off;"]
  
 **Again Docker Build and run**
 
-          docker build -t webnginx .
-          docker run -it --rm -d -p 8080:80 --name web webnginx
+    docker build -t webnginx .
+    docker run -it -p 8080:80 --name web webnginx
 
 **Again Check (Open your favorite browser and navigate to http://localhost:8080   You should see the following NGINX welcome page)**
 
