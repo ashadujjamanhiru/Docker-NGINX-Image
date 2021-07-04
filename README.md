@@ -53,7 +53,7 @@
           FROM nginx:latest
           CMD ["nginx", "-g", "daemon off;"]
 
-**Docker Build**
+**Docker Container Build**
 
           docker build -t webnginx .
 
