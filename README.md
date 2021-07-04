@@ -37,14 +37,15 @@
 
           service docker status
 
-
-**Start Docker**
+**Start Docker Service**
 
           sudo systemctl start docker
 
-**Check Docker Container **
+**Check Docker Container running**
 
           docker ps  
+**Check Docker Container all** 
+          
           docker ps -a
 
 **Use the Official NGINX Docker Image**
