@@ -60,12 +60,16 @@
 **Docker Container run**
 
     docker run -it -p 8080:80 --name web webnginx
+    
+**Start Docker Container**
+
+    docker start web
 
 **Open your favorite browser and navigate to http://localhost:8080   You should see the following NGINX welcome page**
 
     http://localhost:8080
 
-**Adding Custom HTML**
+**Adding Custom HTML** **Stop Docker Container**
 
     docker stop web
           
