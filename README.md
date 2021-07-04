@@ -1,7 +1,8 @@
 **Docker Engine Install on CentOS-8**
 
 **Step1: IF install old Docker engine first Uninstall old versions**
-$ sudo yum remove docker \
+
+          sudo yum remove docker \
 
                    docker-client \
                    
@@ -22,6 +23,7 @@ $ sudo yum remove docker \
    **1. Install using the repository**
 
 $ sudo yum install -y yum-utils
+
 $ sudo yum-config-manager \
     --add-repo \
     https://download.docker.com/linux/centos/docker-ce.repo
