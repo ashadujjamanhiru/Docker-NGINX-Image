@@ -1,2 +1,2 @@
-# Docker-NGINX-Image
-Docker NGINX Image
+# Get NGINX Official Image in Dockerhub
+FROM FROM nginx:latest
