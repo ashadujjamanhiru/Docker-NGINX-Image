@@ -96,4 +96,4 @@ Let’s create a custom html page and then serve that using the nginx image. ind
 
 **Again Check (Open your favorite browser and navigate to http://localhost:8080   You should see the following NGINX welcome page)**
 
-          http://localhost:8080
+    http://localhost:8080
