@@ -43,7 +43,7 @@
    
 **Check Docker Version**
 
-    docker --version
+    docker version
 
 **Check Docker Container running**
 
