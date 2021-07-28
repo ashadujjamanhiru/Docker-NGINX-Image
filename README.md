@@ -40,6 +40,7 @@
 **Start Docker Service**
 
     sudo systemctl start docker
+    sudo systemctl enable docker
 
 **Check Docker Container running**
 
