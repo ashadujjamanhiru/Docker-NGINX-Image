@@ -31,7 +31,7 @@
 **Install Docker Engine**
 **Install the latest version of Docker Engine and containerd**
 
-    sudo yum install docker-ce docker-ce-cli containerd.io
+    sudo yum install -y docker-ce docker-ce-cli containerd.io
 
 **Check Docker Service**
 
@@ -39,8 +39,7 @@
 
 **Start Docker Service**
 
-    sudo systemctl start docker
-    sudo systemctl enable docker
+    systemctl enable docker && systemctl start docker
 
 **Check Docker Container running**
 
