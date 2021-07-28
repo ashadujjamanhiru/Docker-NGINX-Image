@@ -40,10 +40,15 @@
 **Start Docker Service**
 
     systemctl enable docker && systemctl start docker
+   
+**Check Docker Version**
+
+    docker --version
 
 **Check Docker Container running**
 
     docker ps  
+    
 **Check Docker Container all** 
           
     docker ps -a
