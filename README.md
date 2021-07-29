@@ -33,14 +33,14 @@
 
     sudo yum install -y docker-ce docker-ce-cli containerd.io
 
-**Check Docker Service**
-
-    service docker status
-
 **Start Docker Service**
 
     systemctl enable docker && systemctl start docker
    
+**Check Docker Service**
+
+    service docker status
+
 **Check Docker Version**
 
     docker version
